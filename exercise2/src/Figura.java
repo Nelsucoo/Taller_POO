@@ -1,5 +1,4 @@
-public abstract class  Figura{
-
+public abstract class Figura{
     private String tipo;
 
 public  Figura(String tipo){
@@ -18,7 +17,5 @@ public void setTipo(String tipo){
 }
 
 public abstract double area();
-
-
 
 }

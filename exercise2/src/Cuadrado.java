@@ -1,19 +1,22 @@
 public class Cuadrado extends Figura {
+    private double lado;
 
-    private int lado;
-
-    public Cuadrado(int lado, String tipo){
+    public Cuadrado(double lado, String tipo) {
         super(tipo);
         this.lado = lado;
-
-    }   
-    @override
-    public double area(){
-
-        return (double) lado * lado;
     }
 
+    public double getLado() {
+        return lado;
+    }
 
+    public void setLado(double lado) {
+        this.lado = lado;
+    }
 
-
+    @Override
+    public double area() {
+        return lado * lado;
+    }
+    
 }

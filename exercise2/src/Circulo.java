@@ -1,18 +1,22 @@
+public class Circulo extends Figura {
+    private double radio;
 
-
-public class Circulo extends Figura{
-
-    private int radio;
-
-    public Circulo(int radio, String tipo){
+    public Circulo(double radio, String tipo) {
         super(tipo);
         this.radio = radio;
     }
 
-    @override
-    public double area(){
-        return(double) 3.14 * (radio^2)/2;
+    public double getRadio() {
+        return radio;
     }
 
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
 
+    @Override
+    public double area() {
+        return Math.PI * radio * radio;
+    }
+    
 }

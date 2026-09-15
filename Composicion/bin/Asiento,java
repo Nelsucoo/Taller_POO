@@ -1,0 +1,65 @@
+public class Asiento(){
+    
+    private String codigo;
+    private boolean ocupado;
+
+
+
+    // --- CONSTRUCTOR ---
+    //El asiento inicia siempre desocupado
+    public Asiento(String codigo){
+        this.codigo = codigo;
+        this.ocupado = false;
+    }
+
+    // ----- GETTERS -----
+
+    public String getCodigo(){
+        return codigo;
+    }
+
+    public String getOcupado(){
+        return ocupado;
+    }
+
+    //---- METODOS -----
+
+    public void ocupar(){
+        if (ocupado){
+            System.out.println("El asiento " + codigo + "ya esta ocupado.");
+        } else{
+            ocupado = true;
+            System.out.println("Asiento " + codigo + "ocupado.");
+        }
+    }
+
+    public void liberar(){
+        ocupado = false;
+        System.out.println("Asiento " + codigo + "liberado.");
+    }
+
+    public void mostrarEstado(){
+        System.out.println("Asiento" + codigo + ": " + (ocupado ? "ocupado" : "libre"));
+    }
+    //Busca un asiento por codigo y lo ocupa
+    public void embarcar(String codigoAsiento) {
+        for (Asiento a : asientos) {
+            if (a.getCodigo().equals(codigoAsiento)) {
+                a.ocupar();
+                return;
+            }
+        }
+        System.out.println("Asiento " + codigoAsiento + " no encontrado en vuelo " + numero + ".")
+    }
+    //Busca un asiento por codigo y lo libera
+    public void desembarcar(String codigoAsiento) {
+        for (Asiento a: asientos){
+            if (a.getCodigo().esquals(codigoAsiento)) {
+                a.liberar();
+                return;
+            }
+        }
+        System.out.println("Asiento " + codigoAsiento + " no encontrado en vuelo " + numero + ".")
+    }
+    }
+}

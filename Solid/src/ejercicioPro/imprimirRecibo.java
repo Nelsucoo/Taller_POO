@@ -1,9 +1,9 @@
 package ejercicioPro;
 
 public class imprimirRecibo {
-    public void imprimirElRecibo() {
+    public void imprimirElRecibo(Pedido pedido) {
         
         ImpresoraTermica impresora = new ImpresoraTermica();
-        impresora.imprimir("Recibo de " + cliente + ": $" + calcularTotal());
+        impresora.imprimir("Recibo de " + pedido.getCliente() + ": $" + pedido.calcularTotal());
     }
 }

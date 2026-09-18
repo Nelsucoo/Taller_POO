@@ -2,11 +2,10 @@ package ejercicioPro;
 
 public class EnviarCorreo {
 
-    public void enviarCorreoConfirmacion(){
-        System.out.println("Enviando correo de confirmacion a " + cliente + "...");
+    public void enviarCorreoConfirmacion(Pedido pedido){
+        System.out.println("Enviando correo de confirmacion a " + pedido.getCliente() + "...");
     }
-    public void setCliente(String cliente) { this.cliente = cliente; }
-    public void SetTipoCliente(String tipoCliente) { this.tipoCliente = tipoCliente; }
+  
 }
 
 class ImpresoraTermica {
